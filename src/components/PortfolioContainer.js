@@ -8,8 +8,12 @@ import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 
 const PortfolioContainer = () => {
+  useEffect(() => {
+    setCurrentPage(pathname);
+  }, []);
   
-  const [currentPage, setCurrentPage] = useState('Home');
+  const { pathname } = window.location;
+  const [currentPage, setCurrentPage] = useState('/');
   
   const handlePageChange = (page) => setCurrentPage(page);
   
