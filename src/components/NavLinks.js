@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const NavLink = ({ currentPage, handlePageChange, page }) => {
   const to = `${process.env.PUBLIC_URL}/` + (page === 'Home' ? '' : page.toLowerCase());
-  const onClick = () => handlePageChange([to]);
+  const onClick = () => handlePageChange(to);
   const className = currentPage === to ? 'nav-link active' : 'nav-link';
   const data = { onClick, to, className };
 
